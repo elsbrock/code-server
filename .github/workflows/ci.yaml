@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Node.js v14
         uses: actions/setup-node@v2
@@ -63,7 +63,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install Node.js v14
         uses: actions/setup-node@v2
@@ -95,7 +95,7 @@ jobs:
     env:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -188,7 +188,7 @@ jobs:
     container: "centos:7"
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install Node.js v14
         uses: actions/setup-node@v2
@@ -277,7 +277,7 @@ jobs:
       NODE_VERSION: v14.17.4
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install Node.js v14
         uses: actions/setup-node@v2
@@ -326,7 +326,7 @@ jobs:
     runs-on: macos-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install Node.js v14
         uses: actions/setup-node@v2
@@ -371,7 +371,7 @@ jobs:
       # since VS Code will load faster due to the bundling.
       CODE_SERVER_TEST_ENTRY: "./release-packages/code-server-linux-amd64"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install Node.js v14
         uses: actions/setup-node@v2
@@ -425,7 +425,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Run Trivy vulnerability scanner in repo mode
         #Commit SHA for v0.0.17
         uses: aquasecurity/trivy-action@81cc8cd841e9e59602c165cc93336e39dc2f12c8
